@@ -1,0 +1,182 @@
+﻿@using ReactJs.CMSWeb.Caching
+@using ReactJs.CMSWeb.Services
+@using ReactJs.CMSWeb.Helpers
+
+@inherits UmbracoViewPage
+
+@inject ISeoMetadataService seoMetadataService
+@inject IPublishedContentQuery publishedContentQuery
+@inject IPublishedValueFallback publishedValueFallback
+@inject IAppSettings appSettings
+
+@{
+    Layout = null;
+
+    SmidgeHelper.RequiresJs("~/scripts/scripts.js");
+    SmidgeHelper.RequiresJs("~/scripts/lazysizes.min.js");
+
+    if (Model is INavigationBase navigationBase)
+    {
+        var redirectUrl = navigationBase.RedirectUrl?.Url;
+        if (!string.IsNullOrEmpty(redirectUrl))
+        {
+            Context.Response.Redirect(redirectUrl);
+        }
+    }
+
+    var metadataViewModel = seoMetadataService.GetSeoMetadata(publishedContentQuery, Model, publishedValueFallback);
+    var reCaptchaPublicKey = appSettings.RecaptchaPublicKey;
+
+    var navigationManagement = publishedContentQuery.ContentSingleFromCache<NavigationManagement>(CachedContent.NavigationManagementContent);
+    var integration = publishedContentQuery.ContentSingleFromCache<Integration>(CachedContent.IntegrationContent);
+
+    var adobescriptUrl = integration.AdobeAnalyticScriptUrl;
+    var enableAdobe = string.IsNullOrEmpty(adobescriptUrl) ? false : integration.AdobeAnalyticEnable;
+    var schemaMarkupAttributes = string.Empty;
+    if (Model is LandingPage landingPage && landingPage.GetTemplateAlias().Equals("NewsDetail", StringComparison.OrdinalIgnoreCase))
+    {
+        schemaMarkupAttributes = "itemscope itemtype=\"https://schema.org/Article\"";
+    }
+
+    var versionBuild = appSettings.Version;
+
+    var isBrowserSupportWebP = Context.Request.IsRequestSupportWebP();
+    var isGoogleBot = Context.Request.IsGoogleBot();
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    @await Html.PartialAsync("~/views/partials/CanonicalUrl.cshtml", Model)
+    <title>@metadataViewModel.Title</title>
+    <link rel="icon" type="image/ico" href="~/images/favicon.ico">
+    <link rel="preload" href="~/css/bootstrap.min.css" as="style">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="facebook-domain-verification" content="igr4ey08k50buek048nzki75ud67vd" />
+    @await Html.PartialAsync("~/views/partials/Canonical.cshtml")
+    @if (!appSettings.IsProdEnvironment)
+    {
+        <meta name="robots" content="noindex, nofollow" />
+    }
+
+    @await Html.PartialAsync("~/views/partials/Metadata.cshtml", metadataViewModel)
+    @await Html.CachedPartialAsync("~/views/partials/OpenGraph.cshtml", Model, CacheTimes.OneHourCacheTimespan, true)
+    @await Html.PartialAsync("~/views/partials/integrations/GoogleAnalytic.cshtml", null)
+    @await Html.PartialAsync("~/views/partials/integrations/Segment.cshtml")
+    @await Html.PartialAsync("~/views/partials/Schema.cshtml")
+
+    @RenderSection("Header", required: false)
+
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" href="/fonts/TradeGothicLT/TradeGothicLT-BoldTwo.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/TradeGothicLT/TradeGothicLT.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/TradeGothicLT/TradeGothicLT-Light.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" as="script" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    @await SmidgeHelper.CssHereAsync(debug: true)
+
+
+    <link rel="preload" href="~/dist/bundle-fonts.min.css?v=@appSettings.Version" as="style">
+    <link href="~/dist/bundle-fonts.min.css?v=@appSettings.Version" rel="stylesheet"/>
+    <link rel="preload" href="~/dist/bundle-slick.min.css?v=@appSettings.Version" as="style">
+    <link href="~/dist/bundle-slick.min.css?v=@appSettings.Version" rel="stylesheet" />
+    <link rel="preload" href="~/dist/bundle-custom-fonts.min.css?v=@appSettings.Version" as="style">
+    <link href="~/dist/bundle-custom-fonts.min.css?v=@appSettings.Version" rel="stylesheet" />
+    <link rel="preload" href="~/dist/bundle-main.min.css?v=@appSettings.Version" as="style">
+    <link href="~/dist/bundle-main.min.css?v=@appSettings.Version" rel="stylesheet"/>
+    <link rel="preload" href="~/dist/bundle-custom.min.css?v=@appSettings.Version" as="style">
+    <link href="~/dist/bundle-custom.min.css?v=@appSettings.Version" rel="stylesheet" />
+
+    @if (Context.Request.Path == "/")
+    {
+        <link rel="preload" href="~/dist/bundle-redesign.min.css?v=@appSettings.Version" as="style">
+        <link href="~/dist/bundle-redesign.min.css?v=@appSettings.Version" rel="stylesheet" />
+        <link rel="preload" href="~/css/swiper-bundle.min.css" as="style">
+        <link href="~/css/swiper-bundle.min.css" rel="stylesheet" />
+    }
+
+    @RenderSection("StyleSheets", required: false)
+
+    @Html.Raw(Model.GetProperty("HeaderScript")?.GetValue())
+
+    @if (!isGoogleBot)
+    {
+        @await Html.PartialAsync("~/views/partials/integrations/GoogleTagManagerHead.cshtml", null)
+    }
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <style> .navbar { z-index: 50; } </style>
+</head>
+
+<body class="page basicpage">
+    <script type="text/javascript" src="~/scripts/bootstrap.min.js" defer></script>
+    @if (!isGoogleBot)
+    {
+        @await Html.CachedPartialAsync("~/views/partials/integrations/GoogleTagManagerBody.cshtml", null, CacheTimes.FiveMinutesCacheTimespan)
+    }
+    <div class="root">
+        @await Html.CachedPartialAsync("~/views/partials/PageHeader.cshtml", null, CacheTimes.FiveMinutesCacheTimespan)
+        @await Html.CachedPartialAsync("~/views/partials/HeaderBanner.cshtml", Model, CacheTimes.FiveMinutesCacheTimespan, true)
+        <div class="page-wrapper" @Html.Raw(schemaMarkupAttributes)>
+            @RenderBody()
+        </div>
+        @await Html.CachedPartialAsync("~/views/partials/FooterBanner.cshtml", Model, CacheTimes.FiveMinutesCacheTimespan, true)
+        @await Html.CachedPartialAsync("~/views/partials/PageFooter.cshtml", null, CacheTimes.FiveMinutesCacheTimespan)
+    </div>
+    @if (Context.IsReactScriptsIncluded())
+    {
+        @await Html.CachedPartialAsync("~/views/partials/ReactScripts.cshtml", null, CacheTimes.OneHourCacheTimespan)
+    }
+    @RenderSection("BeforeScripts", required: false)
+    <script type="text/javascript" src="https://unpkg.com/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script type="text/javascript" src="https://unpkg.com/lozad@1.15.0/dist/lozad.min.js" defer></script>
+    @{
+        var jsHereUrls = await SmidgeHelper.GenerateJsUrlsAsync();
+        foreach (var jsHereUrl in jsHereUrls)
+        {
+            <script type="text/javascript" src="@(jsHereUrl)" defer></script>
+        }
+    }
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js" defer></script>
+    <script type="text/javascript" src="~/scripts/jquery.zoom.min.js" defer></script>
+    <!-- Swiper JS -->
+    @if (Context.Request.Path == "/")
+    {
+        <script type="text/javascript" src="~/scripts/swiper-bundle.min.js" asp-append-version="true" defer></script>
+    }
+    <script src="~/scripts/redesign/header.js" asp-append-version="true" defer></script>
+    <script src="~/scripts/redesign/sidebar.js" asp-append-version="true" defer></script>
+    <script src="~/scripts/redesign/slides.js" asp-append-version="true" defer></script>
+    @RenderSection("AfterScripts", required: false)
+    @await Html.CachedPartialAsync("~/views/partials/integrations/ShareContent.cshtml", Model, CacheTimes.FiveMinutesCacheTimespan, true)
+</body>
+</html>
+<!--Build Version @(versionBuild)-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        if ('@enableAdobe'.toLowerCase() == 'true') {
+            setTimeout(addAdobeAnalyticScript, 8000);
+            setTimeout(addAdobeAnalyticBottomScript, 9000);
+        }
+    });
+
+    function addAdobeAnalyticScript() {
+        script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "@adobescriptUrl";
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+    function addAdobeAnalyticBottomScript() {
+        script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.innerText = "_satellite.pageBottom();";
+        document.body.appendChild(script);
+    }
+</script>
