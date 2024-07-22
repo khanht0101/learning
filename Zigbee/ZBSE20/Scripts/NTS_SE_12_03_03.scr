@@ -1,0 +1,5 @@
+String caseDesc = "DRLC, Active EndDevice Control List, Mandatory, S, Items 3, Request A Active EndDevice Control (Demand Response and Load Control) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/dr/0/actedc", true);
+SendCommand("get/dr/0/actedc");
+LOG(testcase.status, testcase.result);

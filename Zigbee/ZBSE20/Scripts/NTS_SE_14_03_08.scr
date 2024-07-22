@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Consumption Tariff Interval, Mandatory, S, Items 8, Request Consumption Tariff Interval (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/tp/0/rc/0/tti/0/cti", true);
+SendCommand("get/tp/0/rc/0/tti/0/cti");
+LOG(testcase.status, testcase.result);

@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Put Supply Interruption Override Instance, Discouraged, S, Items 7.a, Put A Supply Interruption Override (Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : put/ppy/0/si/0", true);
+SendCommand("put/ppy/0/si/0");
+LOG(testcase.status, testcase.result);

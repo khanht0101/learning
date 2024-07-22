@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Time Tariff Interval Instance</name>
+    <description>Request Time Tariff Interval (Price) Instance</description>
+    <command>get/tp/0/rc/0/tti/0</command>
+</testcase>

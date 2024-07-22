@@ -1,0 +1,5 @@
+String caseDesc = "Flow Reservation, Delete Flow Reservation Response Instance, Mandatory, S, Items 4.a, Delete Flow Reservation Response (Flow Reservation) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/edev/0/frp/0", true);
+SendCommand("delete/edev/0/frp/0");
+LOG(testcase.status, testcase.result);

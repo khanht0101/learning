@@ -1,0 +1,5 @@
+String caseDesc = "Messaging, Text Message instance, Mandatory, S, Items 4, Request Text Message (Message) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/msg/0/txt", true);
+SendCommand("get/msg/0/txt");
+LOG(testcase.status, testcase.result);

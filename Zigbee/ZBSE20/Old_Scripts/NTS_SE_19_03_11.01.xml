@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DER</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Delete Distributed Energy Resources Control Instance </name>
+    <description>Delete A Distributed Energy Resources Control (DER) Instance</description>
+    <command>delete/derp/0/derc/0</command>
+</testcase>

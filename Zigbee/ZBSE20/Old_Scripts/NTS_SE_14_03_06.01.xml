@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post Time Tariff Interval</name>
+    <description>Post Time Tariff Interval (Price) Instance</description>
+    <command>post/tp/0/rc/0/tti</command>
+</testcase>

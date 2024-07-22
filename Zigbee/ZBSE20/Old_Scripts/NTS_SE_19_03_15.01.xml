@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DER</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Post Distributed Energy Resources Curve Instance </name>
+    <description>Post A Distributed Energy Resources Curve DER) Instance</description>
+    <command>post/derp/0/dcg/0/dc</command>
+</testcase>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Messaging</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post Text Message instance</name>
+    <description>Post Text Message (Message) Instance</description>
+    <command>post/msg/0/txt</command>
+</testcase>

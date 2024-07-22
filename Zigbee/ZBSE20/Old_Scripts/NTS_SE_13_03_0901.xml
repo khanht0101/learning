@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Metering</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Delete Reading</name>
+    <description>Request Delete Reading (Meter) Instance</description>
+    <command>delete/upt/0/mr/0/rs/0/r/0</command>
+</testcase>

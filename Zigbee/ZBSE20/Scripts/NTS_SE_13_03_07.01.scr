@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Put Reading Type Instance, Mandatory, S, Items 7.b, Request Put Reading Type(Meter) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : put/upt/0/mr/0/rt", true);
+SendCommand("put/upt/0/mr/0/rt");
+LOG(testcase.status, testcase.result);

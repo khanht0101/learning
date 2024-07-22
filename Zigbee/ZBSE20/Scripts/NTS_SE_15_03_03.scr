@@ -1,0 +1,5 @@
+String caseDesc = "Messaging, Active Text Message List, Mandatory, S, Items 3, Request Active Text Message (Message) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/msg/0/acttxt", true);
+SendCommand("get/msg/0/acttxt");
+LOG(testcase.status, testcase.result);

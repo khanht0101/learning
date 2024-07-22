@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete Billing Reading Set</name>
+    <description>Delete a Billing Reading Set (Billing)</description>
+    <command>delete/bill/0/ca/0/ver/0/brs</command>
+</testcase>

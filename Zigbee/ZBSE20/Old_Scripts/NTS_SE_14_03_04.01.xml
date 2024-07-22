@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete Rate Component Instance</name>
+    <description>Delete Rate Component (Price) Instance</description>
+    <command>delete/tp/0/rc/0</command>
+</testcase>

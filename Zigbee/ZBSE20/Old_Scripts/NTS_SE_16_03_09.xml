@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Projection Reading Instance</name>
+    <description>Request A Projection Reading (Billing) Instance</description>
+    <command>get/bill/0/ca/0/pro/0</command>
+</testcase>

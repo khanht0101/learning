@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Messaging</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Text Message List</name>
+    <description>Request Text Message (Message) List</description>
+    <command>get/msg/0/txt</command>
+</testcase>

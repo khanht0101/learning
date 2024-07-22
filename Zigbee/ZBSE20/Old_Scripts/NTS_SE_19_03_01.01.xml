@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DER</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Put Distributed Energy Resources Instance</name>
+    <description>Put A list of Distributed Energy Resources (DER) Instance</description>
+    <command>put/0/der</command>
+</testcase>

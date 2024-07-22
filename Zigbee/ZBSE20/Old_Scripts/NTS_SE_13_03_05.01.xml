@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Metering</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Post Reading Set</name>
+    <description>Request Post Reading Set (Meter) </description>
+    <command>post/upt/0/mr/0/rs</command>
+</testcase>

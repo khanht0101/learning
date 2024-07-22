@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Messaging</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete Text Message instance</name>
+    <description>Delete Text Message (Message) Instance</description>
+    <command>delete/msg/0/txt/0</command>
+</testcase>

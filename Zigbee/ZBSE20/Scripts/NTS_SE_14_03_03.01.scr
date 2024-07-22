@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Post Rate Component, Mandatory, S, Items 3.a, Post Rate Component (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/tp/0/rc", true);
+SendCommand("post/tp/0/rc");
+LOG(testcase.status, testcase.result);

@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Reading Set Instance, Mandatory, S, Items 6.a, Request Reading Set (Meter) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/upt/0/mr/0/rs/0", true);
+SendCommand("get/upt/0/mr/0/rs/0");
+LOG(testcase.status, testcase.result);

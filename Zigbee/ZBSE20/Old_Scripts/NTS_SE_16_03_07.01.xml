@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete Billing Period</name>
+    <description>Delete a Billing Period (Billing)</description>
+    <command>delete/bill/0/ca/0/pb/0</command>
+</testcase>

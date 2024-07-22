@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Customer Account List</name>
+    <description>Request A List of customer accounts (Billing) List</description>
+    <command>get/bill</command>
+</testcase>

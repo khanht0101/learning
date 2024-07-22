@@ -1,0 +1,5 @@
+String caseDesc = "DRLC, Post EndDevice Control List, Mandatory, S, Items 4, Post A EndDevice Control (Demand Response and Load Control) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/dr/0/edc", true);
+SendCommand("post/dr/0/edc");
+LOG(testcase.status, testcase.result);

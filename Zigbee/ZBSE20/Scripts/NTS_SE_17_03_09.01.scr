@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Delete Credit Register Instance, Optional, S, Items 9.a, Delete A Credit Register (Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/ppy/0/cr/0", true);
+SendCommand("delete/ppy/0/cr/0");
+LOG(testcase.status, testcase.result);

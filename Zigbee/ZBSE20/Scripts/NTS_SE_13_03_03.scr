@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Metering Reading List, Mandatory, S, Items 3.b, Request Metering Reading (Meter) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/upt/0/mr", true);
+SendCommand("get/upt/0/mr");
+LOG(testcase.status, testcase.result);

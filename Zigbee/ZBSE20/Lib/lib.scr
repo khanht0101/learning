@@ -1,0 +1,25 @@
+import java.io.*;
+import FunctionSet.Metering.*;
+
+public String LocationPath = System.getProperty("user.dir");
+public String ReadxmlFile(String fileName)
+   {
+       String str="";
+
+       //reading   
+       try{
+           InputStream ips=new FileInputStream(new File(fileName)); 
+           InputStreamReader ipsr=new InputStreamReader(ips);
+           BufferedReader br=new BufferedReader(ipsr);
+           String line;
+           while ((line=br.readLine())!=null){
+               System.out.println(line);
+               str +=line+"\n";
+           }
+           br.close(); 
+       }       
+       catch (Exception e){
+          return "";
+       }
+       return  str;
+   }

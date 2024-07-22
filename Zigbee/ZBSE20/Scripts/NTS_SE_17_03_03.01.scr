@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Put Account Balance, Discouraged, S, Items 3.a, Put Account Balance(Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : put/ppy/0/ab", true);
+SendCommand("put/ppy/0/ab");
+LOG(testcase.status, testcase.result);

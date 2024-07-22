@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Delete Supply Interruption Override Instance, Discouraged, S, Items 7.b, Delete A Supply Interruption Override (Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/ppy/0/si/0", true);
+SendCommand("delete/ppy/0/si/0");
+LOG(testcase.status, testcase.result);

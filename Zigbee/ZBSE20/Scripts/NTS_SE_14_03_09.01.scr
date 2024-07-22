@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Delete Consumption Tariff Interval Instance, Discouraged, S, Items 9.a, Delete Consumption Tariff Interval (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/tp/0/rc/0/tti/0/cti/0", true);
+SendCommand("delete/tp/0/rc/0/tti/0/cti/0");
+LOG(testcase.status, testcase.result);

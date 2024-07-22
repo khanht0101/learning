@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Post Supply Interruption Override List, Discouraged, S, Items 6.a, Post a of Active Supply Interruption Override (Prepayment) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/ppy/0/si", true);
+SendCommand("post/ppy/0/si");
+LOG(testcase.status, testcase.result);

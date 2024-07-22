@@ -1,0 +1,5 @@
+String caseDesc = "DRLC, Load Shed Availability Instance, Mandatory, S, Items 6, Request A Load Shed Availability (Demand Response and Load Control) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/edev/0/lsa", true);
+SendCommand("get/edev/0/lsa");
+LOG(testcase.status, testcase.result);

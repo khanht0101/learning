@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Put Account Balance</name>
+    <description>Put Account Balance(Prepayment) Instance</description>
+    <command>put/ppy/0/ab</command>
+</testcase>

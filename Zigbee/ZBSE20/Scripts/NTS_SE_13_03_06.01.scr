@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Delete Reading Set Instance, Mandatory, S, Items 6.b, Request Delete Reading Set (Meter) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/upt/0/mr/0/rs/0", true);
+SendCommand("delete/upt/0/mr/0/rs/0");
+LOG(testcase.status, testcase.result);

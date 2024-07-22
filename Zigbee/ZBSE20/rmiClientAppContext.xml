@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC  "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="RMIUserService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+       <property name="serviceUrl" value="rmi://192.168.1.113:1003/RMIUserService"/>
+        <property name="serviceInterface" value="com.server.IRMIUserService"/>
+       <property name="refreshStubOnConnectFailure" value="true"/>
+        </bean>
+</beans>

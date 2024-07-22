@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post Billing Period</name>
+    <description>Post a Billing Period (Billing) </description>
+    <command>post/bill/0/ca/0/bp</command>
+</testcase>

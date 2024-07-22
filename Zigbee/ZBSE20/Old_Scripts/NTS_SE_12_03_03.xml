@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DRLC</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Active EndDevice Control List /name>
+    <description>Request A Active EndDevice Control (Demand Response and Load Control) List</description>
+    <command>get/dr/0/actedc</command>
+</testcase>
