@@ -1,0 +1,46 @@
+=============================================================
+=============================================================
+                                 Thu Dec 05 23:22:25 ICT 2013
+=============================================================
+
+Localhost name : Khanh-PC
+Localhost Address : 192.168.1.100
+##################################
+System is loading Devices......
+Added to  -----Select device type -----
+Added to In-Premise Display (IPD)
+Added to Load Control (LC)
+Added to Smart Thermostat (ST)
+Added to Meter (MTR)
+Added to Smart Appliance (SA)
+Added to Premises Energy Management (PEM)
+Added to Energy Services Interface (ESI)
+Added to Payment Terminal (PT)
+Added to Inverter (INV)
+Added to Electric Vehicle Supply Equipment (EVSE)
+Added to End-Use Measurement Device (EUMD)
+Added to Plug-in Electric Vehicle (PEV)
+Added to Distributed Energy Resource (DER)
+Added to Communications (Comms) Module
+
+##################################
+System is loading Function Sets......
+Added to Base
+Added to Billing
+Added to Confirmation
+Added to Demand Response - Load Control
+Added to Device Management Configuration
+Added to Dignostics & Monitoring
+Added to Distributed Energy Resource
+Added to Firmware Download
+Added to Messaging
+Added to Metering
+Added to Plug-In Electric Vehicle
+Added to Prepayment
+Added to Pricing
+Added to Registration
+
+##################################
+System is loading Test Cases......
+System is loaded sucessful.
+Client Khanh-PC connected to network successful.

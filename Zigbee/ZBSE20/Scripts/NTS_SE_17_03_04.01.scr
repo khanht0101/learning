@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Put Prepay Operation Status Instance, Discouraged, S, Items 4.a, Put Prepay Operation Status (Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : put/ppy/0/os", true);
+SendCommand("put/ppy/0/os");
+LOG(testcase.status, testcase.result);

@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Credit Register List, Mandatory, S, Items 8, Request A of Credit Register (Prepayment) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/ppy/0/cr", true);
+SendCommand("get/ppy/0/cr");
+LOG(testcase.status, testcase.result);

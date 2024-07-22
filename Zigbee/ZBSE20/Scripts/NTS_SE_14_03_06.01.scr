@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Post Time Tariff Interval, Discouraged, S, Items 6.a, Post Time Tariff Interval (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/tp/0/rc/0/tti", true);
+SendCommand("post/tp/0/rc/0/tti");
+LOG(testcase.status, testcase.result);

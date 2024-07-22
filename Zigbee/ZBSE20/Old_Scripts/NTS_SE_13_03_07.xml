@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Metering</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Reading Type Instance</name>
+    <description>Request Reading Type(Meter) Instance</description>
+    <command>get/upt/0/mr/0/rt</command>
+</testcase>

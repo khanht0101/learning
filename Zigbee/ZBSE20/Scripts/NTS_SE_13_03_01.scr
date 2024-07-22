@@ -1,0 +1,9 @@
+String caseDesc = "Metering, Usage Point List, Mandatory, S, Items 1, Request Usage Point (Meter) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/upt", true);
+String fileName = LocationPath +"/usagePoint.xml" ;
+String context = ReadxmlFile(fileName);
+SendCommand("post/upt",context);
+Print("Send command : get/upt", true);
+SendCommand("get/upt");
+LOG(testcase.status, testcase.result);

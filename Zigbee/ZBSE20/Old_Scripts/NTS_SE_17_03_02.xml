@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Prepayment Instance</name>
+    <description>Request A Prepayment (Prepayment) Instance</description>
+    <command>get/ppy/0</command>
+</testcase>

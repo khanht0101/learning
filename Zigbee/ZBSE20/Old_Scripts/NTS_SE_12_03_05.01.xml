@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DRLC</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete EndDevice Control Instance /name>
+    <description>Delete A EndDevice Control (Demand Response and Load Control) Instance</description>
+    <command>delete/dr/0/edc/0</command>
+</testcase>

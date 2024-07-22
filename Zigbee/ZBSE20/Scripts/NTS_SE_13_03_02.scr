@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Usage Point Instance, Mandatory, S, Items 2, Usage Point (Meter) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/upt/0", true);
+SendCommand("get/upt/0");
+LOG(testcase.status, testcase.result);

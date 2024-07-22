@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DRLC</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Delete Load Shed Availability Instance /name>
+    <description>Delete A Load Shed Availability (Demand Response and Load Control) Instance</description>
+    <command>delete/edev/0/lsa</command>
+</testcase>

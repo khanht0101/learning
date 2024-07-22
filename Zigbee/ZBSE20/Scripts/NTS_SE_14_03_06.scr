@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Time Tariff Interval, Mandatory, S, Items 6, Request Time Tariff Interval (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/tp/0/rc/0/tti", true);
+SendCommand("get/tp/0/rc/0/tti");
+LOG(testcase.status, testcase.result);

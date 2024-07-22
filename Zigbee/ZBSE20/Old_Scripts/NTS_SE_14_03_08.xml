@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Consumption Tariff Interval List</name>
+    <description>Request Consumption Tariff Interval (Price) List</description>
+    <command>get/tp/0/rc/0/tti/0/cti</command>
+</testcase>

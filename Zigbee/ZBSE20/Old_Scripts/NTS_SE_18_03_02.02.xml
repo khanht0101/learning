@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Flow Reservation</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Delete Reservation Request Instance</name>
+    <description>Delete Flow Reservation Request (Flow Reservation) Instance</description>
+    <command>delete/edev/0/frq/0</command>
+</testcase>

@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Delete Rate Component Instance , Mandatory, S, Items 4.a, Delete Rate Component (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/tp/0/rc/0", true);
+SendCommand("delete/tp/0/rc/0");
+LOG(testcase.status, testcase.result);

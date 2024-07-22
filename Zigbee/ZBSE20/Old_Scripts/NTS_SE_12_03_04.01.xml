@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DRLC</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post EndDevice Control List /name>
+    <description>Post A EndDevice Control (Demand Response and Load Control) List</description>
+    <command>post/dr/0/edc</command>
+</testcase>

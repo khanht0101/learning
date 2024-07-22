@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Tariff Profile List</name>
+    <description>Request Tariff Profile (Price) List</description>
+    <command>get/tp</command>
+</testcase>

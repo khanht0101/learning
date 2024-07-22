@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Flow Reservation</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Post Flow Reservation Request List</name>
+    <description>Post Flow Reservation Request (Flow Reservation) List</description>
+    <command>post/edev/0/frq</command>
+</testcase>

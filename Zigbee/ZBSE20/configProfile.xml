@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+    <deviceType>Meter (MTR)</deviceType>
+    <functionSets>
+        <functionSet>
+            <Name>Metering</Name>
+            <Server>1</Server>
+            <Client>1</Client>
+        </functionSet>
+    </functionSets>
+    <ConfigureSystemService>NETWORK Access Server</ConfigureSystemService>
+    <ConfigureNetWorkProtocol>WI-FI</ConfigureNetWorkProtocol>
+    <ConfigurSimulatiedDevice>Simulated METERING</ConfigurSimulatiedDevice>
+</configurations>

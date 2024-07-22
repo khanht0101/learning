@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Tariff Profile Instance, Mandatory, S, Items 2, Request Tariff Profile (Price) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/tp/0", true);
+SendCommand("get/tp/0");
+LOG(testcase.status, testcase.result);

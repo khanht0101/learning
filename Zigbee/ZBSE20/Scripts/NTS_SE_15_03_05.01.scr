@@ -1,0 +1,5 @@
+String caseDesc = "Messaging, Delete Text Message instance, Discouraged, S, Items 5.a, Delete Text Message (Message) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/msg/0/txt/0", true);
+SendCommand("delete/msg/0/txt/0");
+LOG(testcase.status, testcase.result);

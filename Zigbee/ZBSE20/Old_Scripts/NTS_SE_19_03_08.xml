@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DER</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Distributed Energy Resources Program Instance </name>
+    <description>Request A Distributed Energy Resources Program (DER) Instance</description>
+    <command>get/derp/0</command>
+</testcase>

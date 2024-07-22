@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Post Credit Register List</name>
+    <description>Post A of Credit Register (Prepayment) List</description>
+    <command>post/ppy/0/cr</command>
+</testcase>

@@ -1,0 +1,5 @@
+String caseDesc = "Flow Reservation, Post Flow Reservation Request List, Mandatory, S, Items 1.a, Post Flow Reservation Request (Flow Reservation) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/edev/0/frq", true);
+SendCommand("post/edev/0/frq");
+LOG(testcase.status, testcase.result);

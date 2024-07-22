@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DRLC</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Demand Response Program List </name>
+    <description>Request A Demand Response Program (Demand Response and Load Control) List</description>
+    <command>get/dr</command>
+</testcase>

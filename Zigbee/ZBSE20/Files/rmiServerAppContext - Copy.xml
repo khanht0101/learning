@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC  "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="UserMap" class="java.util.concurrent.ConcurrentHashMap" />
+	<bean id="CacheService" class="com.cache.service.CacheService">
+		<property name="userMap" ref="UserMap"/>
+	</bean>
+	<bean id="RMIUserService" class="com.server.RMIUserService" >
+ 		<property name="cacheService" ref="CacheService"/>
+	</bean>
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="RMIUserService"/>
+        <property name="service" ref="RMIUserService"/>
+        <property name="serviceInterface" value="com.server.IRMIUserService"/>
+    	<property name="registryPort" value="1099"/>    
+    </bean>	
+</beans>
+

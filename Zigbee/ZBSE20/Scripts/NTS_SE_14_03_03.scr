@@ -1,0 +1,5 @@
+String caseDesc = "Pricing, Rate Component List, Mandatory, S, Items 3, Request Rate Component (Price) List";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/tp/0/rc", true);
+SendCommand("get/tp/0/rc");
+LOG(testcase.status, testcase.result);

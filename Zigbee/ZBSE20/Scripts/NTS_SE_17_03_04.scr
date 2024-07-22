@@ -1,0 +1,5 @@
+String caseDesc = "Prepayment, Prepay Operation Status Instance, Mandatory, S, Items 4, Request Prepay Operation Status (Prepayment) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/ppy/0/os", true);
+SendCommand("get/ppy/0/os");
+LOG(testcase.status, testcase.result);

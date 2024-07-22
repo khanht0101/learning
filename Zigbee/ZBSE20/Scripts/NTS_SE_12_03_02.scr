@@ -1,0 +1,5 @@
+String caseDesc = "DRLC, Demand Response Program Instance, Mandatory, S, Items 2, Request A Demand Response Program (Demand Response and Load Control) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/dr/0", true);
+SendCommand("get/dr/0");
+LOG(testcase.status, testcase.result);

@@ -1,0 +1,5 @@
+String caseDesc = "Messaging, Messaging Program Instance, Mandatory, S, Items 2, Request Messaging Program (Message) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/msg/0", true);
+SendCommand("get/msg/0");
+LOG(testcase.status, testcase.result);

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Metering</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Usage Point List</name>
+    <description>Request Usage Point (Meter) List</description>
+    <command>get/upt</command>
+</testcase>

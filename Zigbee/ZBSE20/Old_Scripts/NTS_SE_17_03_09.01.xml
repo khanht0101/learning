@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Optional</status>
+    <name>Delete Credit Register Instance</name>
+    <description>Delete A Credit Register (Prepayment) Instance</description>
+    <command>delete/ppy/0/cr/0</command>
+</testcase>

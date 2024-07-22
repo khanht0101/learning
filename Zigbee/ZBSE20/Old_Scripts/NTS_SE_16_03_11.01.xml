@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Delete Historical Reading</name>
+    <description>Delete a Historical Reading (Billing)</description>
+    <command>delete/bill/0/ca/0/ver/0</command>
+</testcase>

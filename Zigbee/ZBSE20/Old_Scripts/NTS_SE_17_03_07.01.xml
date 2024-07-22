@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Put Supply Interruption Override Instance</name>
+    <description>Put A Supply Interruption Override (Prepayment) Instance</description>
+    <command>put/ppy/0/si/0</command>
+</testcase>

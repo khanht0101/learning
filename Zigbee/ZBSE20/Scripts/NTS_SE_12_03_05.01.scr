@@ -1,0 +1,5 @@
+String caseDesc = "DRLC, Delete EndDevice Control Instance, Mandatory, S, Items 5, Delete A EndDevice Control (Demand Response and Load Control) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : delete/dr/0/edc/0", true);
+SendCommand("delete/dr/0/edc/0");
+LOG(testcase.status, testcase.result);

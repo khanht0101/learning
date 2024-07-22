@@ -1,0 +1,5 @@
+String caseDesc = "Metering, Metering Reading instance, Mandatory, S, Items 4.a, Request Metering Reading (Meter) instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : get/upt/0/mr/0", true);
+SendCommand("get/upt/0/mr/0");
+LOG(testcase.status, testcase.result);

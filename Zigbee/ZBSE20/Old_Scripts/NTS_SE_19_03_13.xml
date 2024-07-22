@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>DER</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Distributed Energy Resources Curve Group List </name>
+    <description>Request A of Distributed Energy Resources Curve Group (DER) List</description>
+    <command>get/derp/0/dcg</command>
+</testcase>

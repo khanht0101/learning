@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Billing Reading Set Instance</name>
+    <description>Request A Billing Reading Set (Billing) Instance</description>
+    <command>get/bill/0/ca/0/ver/0/brs/0</command>
+</testcase>

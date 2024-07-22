@@ -1,0 +1,5 @@
+String caseDesc = "Messaging, Post Text Message instance, Discouraged, S, Items 4.a, Post Text Message (Message) Instance";
+testcase.caseDesc = caseDesc;
+Print("Send command : post/msg/0/txt", true);
+SendCommand("post/msg/0/txt");
+LOG(testcase.status, testcase.result);

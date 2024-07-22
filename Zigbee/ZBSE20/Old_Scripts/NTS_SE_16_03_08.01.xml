@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post Projection Reading</name>
+    <description>Post a Projection Reading (Billing) </description>
+    <command>post/bill/0/ca/0/pro</command>
+</testcase>

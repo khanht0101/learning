@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Flow Reservation</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Flow Reservation Response Instance</name>
+    <description>Request Flow Reservation Response (Flow Reservation) Instance</description>
+    <command>get/edev/0/frp/0</command>
+</testcase>

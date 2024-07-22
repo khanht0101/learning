@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Prepayment</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Active Supply Interruption Override List</name>
+    <description>Request a of Active Supply Interruption Override (Prepayment) List</description>
+    <command>get/ppy/0/actsi</command>
+</testcase>

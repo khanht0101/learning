@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Billing</functionset>
+    <server>1</server>
+    <status>Mandatory</status>
+    <name>Active Billing Period List</name>
+    <description>Request A of Active Billing Period (Billing) List</description>
+    <command>get/bill/0/ca/0/actbp</command>
+</testcase>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase>
+    <functionset>Pricing</functionset>
+    <server>1</server>
+    <status>Discouraged</status>
+    <name>Post Rate Component</name>
+    <description>Post Rate Component (Price) Instance</description>
+    <command>post/tp/0/rc</command>
+</testcase>
